@@ -1,0 +1,107 @@
+@import url('https://fonts.cdnfonts.com/css/satoshi');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+@import "tailwindcss";
+
+:root {
+  color-scheme: light dark;
+  --paper: light-dark(#f2f0e3, #1f1f1f);
+  --paper-reverse: light-dark(#1f1f1f, #f2f0e3);
+}
+
+.text-paper {
+  color: var(--paper);
+}
+
+.text-paper-reverse {
+  color: var(--paper-reverse);
+}
+
+.bg-paper {
+  background-color: var(--paper);
+}
+
+.bg-paper-reverse {
+  background-color: var(--paper-reverse);
+}
+
+.border-paper {
+  border-color: var(--paper);
+}
+
+.border-paper-reverse {
+  border-color: var(--paper-reverse);
+}
+
+.fill-paper {
+  fill: var(--paper);
+}
+
+.fill-paper-reverse {
+  fill: var(--paper-reverse);
+}
+
+.font-sans {
+  font-family: 'Satoshi', sans-serif;
+}
+
+.font-se {
+  font-family: 'Fraunces', serif;
+}
+
+html, body {
+  background-color: var(--paper);
+}
+
+body {
+  font-family: 'Satoshi', sans-serif;
+  max-width: 1280px;
+  margin: auto;
+  padding: 2rem;
+}
+
+h1, h2 {
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "SOFT" 0,
+    "WONK" 0;
+}
+
+h1 {
+  font-size: 48pt;
+}
+
+h2 {
+  font-size: 32pt;
+  font-weight: 200;
+}
+
+.footer-logo {
+  font-size: 30vh;
+  font-weight: bolder;
+  
+  --_space: ;
+
+  background-image: light-dark(linear-gradient(
+    180deg var(--_space),
+    #3e47342d 0%,
+    #ffffff00 70%
+  ),linear-gradient(
+    180deg var(--_space),
+    #bbeb8b2d 0%,
+    #ffffff00 70%
+  ));
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Modern: OKLCH interpolation */
+@supports (background-image: linear-gradient(in oklch, #000, #fff)) {
+  .footer-logo {
+    --_space: in oklch;
+  }
+}
