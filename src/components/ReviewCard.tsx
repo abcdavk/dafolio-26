@@ -110,7 +110,7 @@ export default function ReviewCard() {
   }
 
   return (
-    <section className="flex flex-col items-center sm:mt-16 px-4 py-10 text-paper rounded-2xl sm:bg-[url('./assets/background.png')] bg-cover">
+    <section className="flex flex-col items-center sm:mt-16 px-4 py-10 text-paper rounded-2xl sm:bg-[url('./assets/background.webp')] bg-cover">
       <div className="relative w-full md:max-w-120 min-h-80">
         <div className="absolute inset-0 bg-paper dark:slate rounded-2xl -rotate-2" />
         <div
