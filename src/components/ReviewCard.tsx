@@ -110,7 +110,7 @@ export default function ReviewCard() {
   }
 
   return (
-    <section className="flex flex-col items-center sm:mt-16 px-4 py-10 text-paper rounded-2xl sm:bg-[url('./assets/background.webp')] bg-cover">
+    <section className="flex flex-col items-center mt-16 px-4 py-10 text-paper rounded-2xl bg-[url('./assets/background.webp')] bg-cover">
       <div className="relative w-full md:max-w-120 min-h-80">
         <div className="absolute inset-0 bg-paper dark:slate rounded-2xl -rotate-2" />
         <div
@@ -132,7 +132,7 @@ export default function ReviewCard() {
 
           <div
             className={`
-              absolute inset-0 p-8 flex flex-col bg-paper-reverse rounded-2xl
+              absolute inset-0 p-5 sm:p-8 flex flex-col bg-paper-reverse rounded-2xl
               transition-all duration-400 ease-in-out group hover:scale-101
               ${
                 isAnimating
@@ -152,12 +152,13 @@ export default function ReviewCard() {
                 </p>
               </div>
 
-              <div className="flex gap-1">
-                <Star className="fill-paper" />
-                <Star className="fill-paper" />
-                <Star className="fill-paper" />
-                <Star className="fill-paper" />
-                <Star className="fill-paper" />
+              <div className="flex gap-1 h-fit items-center">
+                <span className="sm:hidden font-bold">5</span>
+                <Star className="fill-paper w-5 h-5" />
+                <Star className="fill-paper w-5 h-5 hidden sm:block" />
+                <Star className="fill-paper w-5 h-5 hidden sm:block" />
+                <Star className="fill-paper w-5 h-5 hidden sm:block" />
+                <Star className="fill-paper w-5 h-5 hidden sm:block" />
               </div>
             </div>
 
