@@ -21,24 +21,25 @@ export default function HomePage() {
           <span className="">My Projects</span>
         </a>
       </section>
-      <ReviewCard />
-      <section className="flex flex-col sm:flex-row sm:justify-center sm:mt-16 gap-6">
+      <h2 className="text-[#f2f0e3] pb-2 text-center mt-16 animate-pulse hover:animate-none">Trustworthy</h2>
+      <section className="flex flex-col sm:flex-row sm:justify-center sm:mt-4 gap-6">
         <div className="flex flex-col items-center gap-3 group">
           <PackageCheck className="group-hover:hidden" height={64} width={64} />
-          <PackageOpen className="hidden group-hover:block" height={64} width={64} />
+          <PackageOpen className="hidden group-hover:block animate-wiggle" height={64} width={64} />
           <p className="font-bold">On Time Delivery</p>
         </div>
         <div className="flex flex-col items-center gap-3 group">
           <MessageSquareCheck className="group-hover:hidden" height={64} width={64} />
-          <MessagesSquare className="hidden group-hover:block" height={64} width={64} />
+          <MessagesSquare className="hidden group-hover:block animate-wiggle" height={64} width={64} />
           <p className="font-bold">Communicative</p>
         </div>
         <div className="flex flex-col items-center gap-3 group">
           <Sparkles className="group-hover:hidden" height={64} width={64} />
-          <Star className="hidden group-hover:block animate-spin" height={64} width={64} />
-          <p className="font-bold">4.9/5.0 Rating</p>
+          <p className="hidden group-hover:block text-3xl h-full p-2 border border-paper-reverse rounded-lg pt-3 animate-wiggle">4.9/5.0</p>
+          <p className="font-bold">Excelent Rating</p>
         </div>
       </section>
+      <ReviewCard />
     </>
   )
 }
