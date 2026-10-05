@@ -44,7 +44,7 @@
   font-family: 'Satoshi', sans-serif;
 }
 
-.font-se {
+.font-serif {
   font-family: 'Fraunces', serif;
 }
 
@@ -59,7 +59,7 @@ body {
   padding: 2rem;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: "Fraunces", serif;
   font-optical-sizing: auto;
   font-weight: 300;
@@ -115,6 +115,18 @@ h2 {
     }
     50% {
       transform: rotate(3deg);
+    }
+  }
+
+
+  --animate-spin-y: spin-y 3s ease-in-out infinite;
+  @keyframes spin-y {
+    0%,
+    100% {
+      transform: rotateY(180deg)
+    }
+    50% {
+      transform: rotateY(-180deg);
     }
   }
 }

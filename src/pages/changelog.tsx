@@ -11,7 +11,7 @@ export default function ChangelogPage() {
         <hr className="my-6"/>
         <div>
           <h2>v26.10</h2>
-          <p className="mb-4">This is the most beautiful design I've ever made. To be honest, it's not originally by me, I just recreate <a href="https://zen-browser.app/" className="underline">Zen Browser Style</a>.</p>
+          <p className="mb-4">This is the most dedicated design I've ever made. To be honest, it's not originally by me, I just recreate <a href="https://zen-browser.app/" className="underline">Zen Browser Style</a>.</p>
           <p>What's new:</p>
           <ul >
             <li>- New modern minimalist pastel theme.</li>
