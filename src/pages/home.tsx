@@ -1,5 +1,4 @@
-import { ArrowUpRight, Badge, Check, CircleDollarSign, Cog, MessageSquare, MessageSquareCheck, MessagesSquare, PackageCheck, PackageOpen, ShoppingCart, Sparkles, Star } from "lucide-react"
-import { useState } from "react"
+import { ArrowUpRight, CircleDollarSign, Cog, MessageSquareCheck, MessagesSquare, PackageCheck, PackageOpen, ShoppingCart, Sparkles } from "lucide-react"
 import ReviewCard from "../components/ReviewCard"
 import { Link } from "react-router-dom"
 

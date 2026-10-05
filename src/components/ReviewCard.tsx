@@ -1,5 +1,5 @@
-import { ChevronLeft, ChevronRight, Hand, HandGrab, Loader, Star } from "lucide-react";
-import { useState, type Dispatch } from "react";
+import { Hand, HandGrab, Star } from "lucide-react";
+import { useState } from "react";
 
 const reviews = [
   {
