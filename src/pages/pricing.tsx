@@ -78,7 +78,7 @@ export default function PricingPage() {
                     <div className="bg-gray-400/10 rounded-xl p-4 mt-2 max-w-148 flex flex-col transition-transform hover:scale-101">
                         <p className="text-lg">Looking for a developer who enjoys solving problems, building web applications, or creating custom Minecraft Bedrock addons? I'd love to help bring your ideas to life. </p>
                     </div>
-                        <LinkDelay to="https://www.fiverr.com/dave_64" newTab delayDuration={hireButtonDelay} className="flex group justify-center items-center gap-3 mt-8 p-2 text-paper reverse w-full rounded-xl transition-all hover:scale-101 bg-amber-300 hover:bg-amber-400 overflow-hidden cursor-pointer" onClick={onHireClick} >
+                        <LinkDelay to="https://www.fiverr.com/dave_64" newTab delayDuration={hireButtonDelay} className="flex group justify-center items-center gap-3 mt-8 p-2 text-paper reverse w-full rounded-xl transition-all hover:scale-101 bg-paper-reverse dark:bg-amber-300 dark:hover:bg-amber-400 overflow-hidden cursor-pointer" onClick={onHireClick} >
 							<span className={`font-bold transition-transform duration-300 ${isButtonClicked ? "translate-x-3" : ""}`}>Hire Me on Fiverr</span>
 							<Send height={20} width={20} className={`rotate-45 transition-transform duration-300 group-hover:animate-wiggle ${isButtonClicked ? "translate-x-64" : ""}`} />
                    		</LinkDelay>
