@@ -110,7 +110,7 @@ export default function ReviewCard() {
   }
 
   return (
-    <section className="flex flex-col items-center mt-16 px-4 py-10 text-paper rounded-2xl bg-[url('./assets/background.webp')] bg-cover">
+    <section className="flex flex-col items-center mt-16 px-4 py-10 text-paper rounded-2xl bg-[url('./assets/background.webp')] bg-cover group">
       <div className="relative w-full md:max-w-120 min-h-80">
         <div className="absolute inset-0 bg-paper dark:slate rounded-2xl -rotate-2" />
         <div
@@ -133,7 +133,7 @@ export default function ReviewCard() {
           <div
             className={`
               absolute inset-0 p-5 sm:p-8 flex flex-col bg-paper-reverse rounded-2xl
-              transition-all duration-400 ease-in-out group hover:scale-101
+              transition-all duration-400 ease-in-out group hover:scale-101 animate-wiggle-slow group-hover:animate-none
               ${
                 isAnimating
                   ? "-translate-y-2 scale-95 -rotate-3 opacity-0 z-10"
