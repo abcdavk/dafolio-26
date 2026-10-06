@@ -3,111 +3,115 @@ import { useState } from "react";
 
 const reviews = [
   {
-    username: 'plast711',
-    region: 'United States',
-    comment: 'I recommend this person if you want addons made.',
-    price: 'Up to $50',
-    duration: '3 days',
+    username: "plast711",
+    region: "United States",
+    comment: "I recommend this person if you want addons made.",
+    price: "Up to $50",
+    duration: "3 days",
   },
   {
-    username: 'lexluthor059103',
-    region: 'United States',
-    comment: '5/5 Exactly what I asked for and for a fair price too',
-    price: 'Up to $50',
-    duration: '12 days',
+    username: "lexluthor059103",
+    region: "United States",
+    comment: "5/5 Exactly what I asked for and for a fair price too",
+    price: "Up to $50",
+    duration: "12 days",
   },
   {
-    username: 'thebeast242',
-    region: 'United States',
-    comment: 'I enjoyed working with him time zone was a small problem but he did well',
-    price: 'Up to $50',
-    duration: '11 days',
+    username: "thebeast242",
+    region: "United States",
+    comment:
+      "I enjoyed working with him time zone was a small problem but he did well",
+    price: "Up to $50",
+    duration: "11 days",
   },
   {
-    username: 'jgarcia405',
-    region: 'United States',
-    comment: 'The addon turned out great. Turned out just as I had hoped.',
-    price: 'Up to $50',
-    duration: '8 days',
+    username: "jgarcia405",
+    region: "United States",
+    comment: "The addon turned out great. Turned out just as I had hoped.",
+    price: "Up to $50",
+    duration: "8 days",
   },
   {
-    username: 'blaisekey',
-    region: 'United States',
-    comment: 'I love this dudes coding skills',
-    price: 'Up to $50',
-    duration: '1 day',
+    username: "blaisekey",
+    region: "United States",
+    comment: "I love this dudes coding skills",
+    price: "Up to $50",
+    duration: "1 day",
   },
   {
-    username: 'safxgamx',
-    region: 'United States',
-    comment: 'I loved the mod it was perfect and exactly how I wanted it',
-    price: 'Up to $50',
-    duration: '4 days',
+    username: "safxgamx",
+    region: "United States",
+    comment: "I loved the mod it was perfect and exactly how I wanted it",
+    price: "Up to $50",
+    duration: "4 days",
   },
   {
-    username: 'itsuki56',
-    region: 'Japan',
-    comment: "I ordered to make an Anti-toxic mask for my RP Server, and I liked it so much! It's working very well as expected. I'll want to order more in the future!",
-    price: 'Up to $50',
-    duration: '8 days',
+    username: "itsuki56",
+    region: "Japan",
+    comment:
+      "I ordered to make an Anti-toxic mask for my RP Server, and I liked it so much! It's working very well as expected. I'll want to order more in the future!",
+    price: "Up to $50",
+    duration: "8 days",
   },
   {
-    username: 'samuelg4',
-    region: 'Mexico',
-    comment: 'Dave, es un gran desarrollador, me encanto el resultado. Buena comunicación, gran entendimiento, altamente recomendado.',
-    price: 'Up to $50',
-    duration: '10 days',
+    username: "samuelg4",
+    region: "Mexico",
+    comment:
+      "Dave, es un gran desarrollador, me encanto el resultado. Buena comunicación, gran entendimiento, altamente recomendado.",
+    price: "Up to $50",
+    duration: "10 days",
   },
   {
-    username: 'wintermdev',
-    region: 'United States',
-    comment: 'Always amazing to work with! Happy to communicate and commission this person! I highly recommend!',
-    price: 'Up to $50',
-    duration: '10 days',
+    username: "wintermdev",
+    region: "United States",
+    comment:
+      "Always amazing to work with! Happy to communicate and commission this person! I highly recommend!",
+    price: "Up to $50",
+    duration: "10 days",
   },
   {
-    username: 'tigerxxmc',
-    region: 'United Kingdom',
-    comment: 'Goated Developer Everyone buy from him',
-    price: 'Up to $50',
-    duration: '4 days',
+    username: "tigerxxmc",
+    region: "United Kingdom",
+    comment: "Goated Developer Everyone buy from him",
+    price: "Up to $50",
+    duration: "4 days",
   },
   {
-    username: 'markusell',
-    region: 'Belarus',
-    comment: 'good code and delivery 👍',
-    price: 'Up to $50',
-    duration: '1 day',
+    username: "markusell",
+    region: "Belarus",
+    comment: "good code and delivery 👍",
+    price: "Up to $50",
+    duration: "1 day",
   },
   {
-    username: 'markikkifee',
-    region: 'Germany',
-    comment: 'he was very polite and communicative. Im very satisfied',
-    price: 'Up to $50',
-    duration: '4 weeks',
+    username: "markikkifee",
+    region: "Germany",
+    comment: "he was very polite and communicative. Im very satisfied",
+    price: "Up to $50",
+    duration: "4 weeks",
   },
-]
+];
 
 export default function ReviewCard() {
-  const randomStart = Math.floor(Math.random() * reviews.length)
+  const randomStart = Math.floor(Math.random() * reviews.length);
 
-  const [review, setReview] = useState(randomStart)
-  const [isAnimating, setIsAnimating] = useState(false)
-  const [isClicking, setIsClicking] = useState(false)
+  const [review, setReview] = useState(randomStart);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [isClicking, setIsClicking] = useState(false);
 
   const nextReview = () => {
-    if (isAnimating) return
+    if (isAnimating) return;
     if (!isClicking) {
-      setIsClicking(true)
+      setIsClicking(true);
     }
 
-    setIsAnimating(true)
+    setIsAnimating(true);
 
     setTimeout(() => {
-      setReview((current) => (current + 1) % reviews.length)
-      setIsAnimating(false)
-    }, 400)
-  }
+      setReview((current) => (current + 1) % reviews.length);
+      setIsAnimating(false);
+    }, 400);
+  };
 
   return (
     <section className="flex flex-col items-center mt-16 px-4 py-10 text-paper rounded-2xl bg-[url('./assets/background.webp')] bg-cover group">
@@ -127,8 +131,7 @@ export default function ReviewCard() {
                   : "translate-x-1 translate-y-1 scale-95 -rotate-3 z-10"
               }
             `}
-          >
-          </div>
+          ></div>
 
           <div
             className={`
@@ -143,13 +146,9 @@ export default function ReviewCard() {
           >
             <div className="flex justify-between">
               <div className="mb-2">
-                <p className="font-bold">
-                  {reviews[review].username}
-                </p>
+                <p className="font-bold">{reviews[review].username}</p>
 
-                <p className="font-light text-sm">
-                  {reviews[review].region}
-                </p>
+                <p className="font-light text-sm">{reviews[review].region}</p>
               </div>
 
               <div className="flex gap-1 h-fit items-center">
@@ -165,25 +164,19 @@ export default function ReviewCard() {
             <p>{reviews[review].comment}</p>
 
             <div className="flex justify-between mt-auto">
-              <p className="font-bold">
-                {reviews[review].price}
-              </p>
+              <p className="font-bold">{reviews[review].price}</p>
 
-              <p className="font-bold">
-                {reviews[review].duration}
-              </p>
+              <p className="font-bold">{reviews[review].duration}</p>
             </div>
-            {
-              !isClicking && (
-                <div className="absolute bottom-8 left-[50%]">
-                  <Hand className="text-paper scale-120 animate-bounce group-hover:hidden" />
-                  <HandGrab className="text-paper scale-120 animate-bounce hidden group-hover:block" />
-                </div>
-              ) 
-            }
+            {!isClicking && (
+              <div className="absolute bottom-8 left-[50%]">
+                <Hand className="text-paper scale-120 animate-bounce group-hover:hidden" />
+                <HandGrab className="text-paper scale-120 animate-bounce hidden group-hover:block" />
+              </div>
+            )}
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

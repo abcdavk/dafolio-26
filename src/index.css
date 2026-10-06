@@ -1,5 +1,5 @@
-@import url('https://fonts.cdnfonts.com/css/satoshi');
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+@import url("https://fonts.cdnfonts.com/css/satoshi");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
 @import "tailwindcss";
 
 :root {
@@ -41,25 +41,28 @@
 }
 
 .font-sans {
-  font-family: 'Satoshi', sans-serif;
+  font-family: "Satoshi", sans-serif;
 }
 
 .font-serif {
-  font-family: 'Fraunces', serif;
+  font-family: "Fraunces", serif;
 }
 
-html, body {
+html,
+body {
   background-color: var(--paper);
 }
 
 body {
-  font-family: 'Satoshi', sans-serif;
+  font-family: "Satoshi", sans-serif;
   max-width: 1280px;
   margin: auto;
   padding: 2rem;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: "Fraunces", serif;
   font-optical-sizing: auto;
   font-weight: 300;
@@ -82,18 +85,13 @@ h2 {
 .footer-logo {
   font-size: 30vh;
   font-weight: bolder;
-  
+
   --_space: ;
 
-  background-image: light-dark(linear-gradient(
-    180deg var(--_space),
-    #3e47342d 0%,
-    #ffffff00 70%
-  ),linear-gradient(
-    180deg var(--_space),
-    #bbeb8b2d 0%,
-    #ffffff00 70%
-  ));
+  background-image: light-dark(
+    linear-gradient(180deg var(--_space), #3e47342d 0%, #ffffff00 70%),
+    linear-gradient(180deg var(--_space), #bbeb8b2d 0%, #ffffff00 70%)
+  );
   background-clip: text;
   color: transparent;
   -webkit-background-clip: text;
@@ -130,12 +128,11 @@ h2 {
     }
   }
 
-
   --animate-spin-y: spin-y 3s ease-in-out infinite;
   @keyframes spin-y {
     0%,
     100% {
-      transform: rotateY(180deg)
+      transform: rotateY(180deg);
     }
     50% {
       transform: rotateY(-180deg);
