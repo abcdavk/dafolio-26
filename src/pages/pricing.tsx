@@ -1,6 +1,17 @@
-import { Check } from "lucide-react";
+import { Check, Send } from "lucide-react";
+import { LinkDelay } from "../components/LinkDelay";
+import { useState } from "react";
 
 export default function PricingPage() {
+	const [ isButtonClicked, setIsButtonClicked ] = useState(false)
+	const hireButtonDelay = 700
+
+	const onHireClick = () => {
+		setIsButtonClicked(true)
+
+		setTimeout(() => setIsButtonClicked(false), hireButtonDelay)
+	}
+
     return (
         <>
             <section className="mt-16">
@@ -14,7 +25,7 @@ export default function PricingPage() {
                                 <p className="font-serif text-7xl font-extralight">$10 <span className="text-2xl line-through align-top">$15</span></p>
                             </div>
                         </div>
-                        <div className="flex justify-between mt-4 p-2">
+                        <div className="block sm:flex justify-between mt-4 p-2">
                             <p className="uppercase font-bold pr-4">Features</p>
                             <ul className="text-lg">
                                 <li className="flex gap-1"><Check className="pt-1" height={24} width={24}/>Small Feature</li>
@@ -27,12 +38,12 @@ export default function PricingPage() {
                         <div className="flex flex-col bg-gray-400/10 p-5 rounded-lg h-72 max-h-72">
                             <h3 className="text-5xl">Standard</h3>
                             <p className="pt-2">More complex features and Standard multiplayer addon.</p>
-                            <div className="flex justify-between mt-auto">
+                            <div className="block sm:flex justify-between mt-auto">
                                 <p className="font-serif text-7xl font-extralight">$25 <span className="text-2xl line-through align-top">$30</span></p>
-                                <p className="mt-auto bg-amber-600/10 px-2 py-1 rounded-lg">Best Offer</p>
+                                <p className="mt-3 sm:mt-auto bg-amber-600/10 px-2 py-1 rounded-lg">Best Offer</p>
                             </div>
                         </div>
-                        <div className="flex justify-between mt-4 p-2">
+                        <div className="block sm:flex justify-between mt-4 p-2">
                             <p className="uppercase font-bold pr-4">Features</p>
                             <ul className="text-lg">
                                 <li className="flex gap-1"><Check className="pt-1" height={24} width={24}/>Everything in Starter</li>
@@ -49,7 +60,7 @@ export default function PricingPage() {
                                 <p className="font-serif text-7xl font-extralight">$50 <span className="text-2xl align-top">to $100</span></p>
                             </div>
                         </div>
-                        <div className="flex justify-between mt-4 p-2">
+                        <div className="block sm:flex justify-between mt-4 p-2">
                             <p className="uppercase font-bold pr-4">Features</p>
                             <ul className="text-lg">
                                 <li className="flex gap-1"><Check className="pt-1" height={24} width={24}/>Everything in Standard</li>
@@ -67,9 +78,10 @@ export default function PricingPage() {
                     <div className="bg-gray-400/10 rounded-xl p-4 mt-2 max-w-148 flex flex-col transition-transform hover:scale-101">
                         <p className="text-lg">Looking for a developer who enjoys solving problems, building web applications, or creating custom Minecraft Bedrock addons? I'd love to help bring your ideas to life. </p>
                     </div>
-                    <a href="https://www.fiverr.com/dave_64" className="mt-8 p-2 text-paper bg-paper-reverse text-center w-full rounded-xl transition-transform hover:scale-101 font-bold">
-                        Hire Me on Fiverr
-                    </a>
+                        <LinkDelay to="https://www.fiverr.com/dave_64" newTab delayDuration={hireButtonDelay} className="flex group justify-center items-center gap-3 mt-8 p-2 text-paper reverse w-full rounded-xl transition-all hover:scale-101 bg-amber-300 hover:bg-amber-400 overflow-hidden" onClick={onHireClick} >
+							<span className={`font-bold transition-transform duration-300 ${isButtonClicked ? "translate-x-3" : ""}`}>Hire Me on Fiverr</span>
+							<Send height={20} width={20} className={`rotate-45 transition-transform duration-300 group-hover:animate-wiggle ${isButtonClicked ? "translate-x-64" : ""}`} />
+                   		</LinkDelay>
                 </div>
             </section>
         </>
