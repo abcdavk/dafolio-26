@@ -70,11 +70,12 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 48pt;
+  font-size: clamp(2rem, 5vw + 1rem, 4rem);
+  line-height: 0.9;
 }
 
 h2 {
-  font-size: 32pt;
+  font-size: clamp(1.5rem, 4vw + 1rem, 2.66rem);
   font-weight: 200;
 }
 
@@ -118,6 +119,17 @@ h2 {
     }
   }
 
+  --animate-wiggle-slow: wiggle-slow 5s ease-in-out infinite;
+  @keyframes wiggle-slow {
+    0%,
+    100% {
+      transform: rotate(-1deg);
+    }
+    50% {
+      transform: rotate(1deg);
+    }
+  }
+
 
   --animate-spin-y: spin-y 3s ease-in-out infinite;
   @keyframes spin-y {
@@ -130,3 +142,5 @@ h2 {
     }
   }
 }
+
+@custom-variant hover (&:hover);
