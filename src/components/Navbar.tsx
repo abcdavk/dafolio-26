@@ -22,7 +22,7 @@ export default function Navbar() {
         >
           {hiddenText}{" "}
           <ArrowUpRight
-            className={`transition-transform ${routeLocation.pathname !== "/" ? "rotate-180" : ""}`}
+            className={`transition-transform duration-500 ${routeLocation.pathname !== "/" ? "rotate-180" : ""}`}
           />
         </Link>
       </div>
