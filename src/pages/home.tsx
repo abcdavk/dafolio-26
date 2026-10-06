@@ -6,7 +6,7 @@ export default function HomePage() {
   return (
     <>
       <section className="mt-16">
-        <h1 className="text-center leading-16" id="hero-section">
+        <h1 className="text-center" id="hero-section">
           A dedicated <span className="italic text-[#41681b] dark:text-[#bbeb8b]">programmer</span><br />at your <span className="underline">service</span>.
         </h1>
       </section>
