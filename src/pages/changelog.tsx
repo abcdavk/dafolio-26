@@ -38,9 +38,8 @@ export default function ChangelogPage() {
           <p>What's new:</p>
           <ul>
             <li>- New modern minimalist pastel theme.</li>
-            <li>- New hover animation.</li>
+            <li>- New button and hover animation.</li>
             <li>- New auto dark and light mode.</li>group-hover:-translate-x-6
-            sm:group-hover:-translate-x-2
           </ul>
         </div>
       </section>
