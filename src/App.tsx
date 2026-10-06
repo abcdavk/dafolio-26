@@ -5,6 +5,7 @@ import HomePage from "./pages/home";
 import ChangelogPage from "./pages/changelog";
 import PricingPage from "./pages/pricing.tsx";
 import ProjectsPage from "./pages/projects.tsx";
+import NotFound from "./pages/not-found.tsx";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/changelog" element={<ChangelogPage />} />
           <Route path="/pricing" element={<PricingPage />} />
           <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
       </BrowserRouter>

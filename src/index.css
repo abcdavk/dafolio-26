@@ -98,6 +98,11 @@ h2 {
   -webkit-text-fill-color: transparent;
 }
 
+.not-found-title {
+  font-size: 18vh;
+  font-weight: 500;
+}
+
 /* Modern: OKLCH interpolation */
 @supports (background-image: linear-gradient(in oklch, #000, #fff)) {
   .footer-logo {
