@@ -27,7 +27,7 @@ export default function ChangelogPage() {
         <hr className="my-6" />
         <div>
           <h2>v26.10</h2>
-          <p className="mb-4">
+          <p>
             This is the most dedicated design I've ever made. To be honest, it's
             not originally by me, I just recreate{" "}
             <a href="https://zen-browser.app/" className="underline">
@@ -35,11 +35,29 @@ export default function ChangelogPage() {
             </a>
             .
           </p>
-          <p>What's new:</p>
+          <p className="mt-4">What's new:</p>
           <ul>
             <li>- New modern minimalist pastel theme.</li>
+            <li>- Simplify footer and navbar.</li>
             <li>- New button and hover animation.</li>
-            <li>- New auto dark and light mode.</li>group-hover:-translate-x-6
+            <li>- New auto dark and light mode.</li>
+            <li>
+              - Remove the <code>/art</code> page.
+            </li>
+            <li>
+              - No more <code>marquee</code>.
+            </li>
+          </ul>
+        </div>
+        <div className="mt-4">
+          <h2>v26.8</h2>
+          <p>
+            In this version, I'm using Neo-pixel art design by using pixelated
+            font and vibrant color. It's not well polised.
+          </p>
+          <p className="mt-4">What's new:</p>
+          <ul>
+            <li>- New Neo-pixel art theme.</li>
           </ul>
         </div>
       </section>
