@@ -119,7 +119,7 @@ export default function ReviewCard() {
   };
 
   return (
-    <section className="relative flex flex-col items-center mt-16 px-4 py-10 text-paper rounded-2xl bg-[url('./assets/background.webp')] bg-cover overflow-hidden">
+    <section className="relative flex flex-col items-center mt-16 px-4 py-10 text-paper rounded-2xl bg-[url('./assets/background.webp')] bg-cover overflow-hidden select-none">
       <div
         hidden={!onTechStack}
         className="absolute flex items-center justify-center z-10 bottom-0 bg-black/50 w-full h-full p-4"
