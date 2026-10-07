@@ -128,7 +128,7 @@ export default function ReviewCard() {
           <h4 className="text-center font-bold text-black bg-white/40 p-2 rounded-xl">
             Tech Stack
           </h4>
-          <h5 className="my-2">Web Development</h5>
+          <h5 className="my-2 text-sm">Web Development</h5>
           <div className="flex gap-2 flex-wrap">
             <img
               src="https://raw.githubusercontent.com/tandpfun/skill-icons/refs/heads/main/icons/React-Dark.svg"
@@ -156,7 +156,7 @@ export default function ReviewCard() {
               className="transition-all h-12 w-12"
             />
           </div>
-          <h5 className="my-2">Desktop</h5>
+          <h5 className="my-2 text-sm">Desktop</h5>
           <div className="flex gap-2 flex-wrap">
             <img
               src="https://raw.githubusercontent.com/tandpfun/skill-icons/refs/heads/main/icons/CS.svg"
@@ -184,7 +184,7 @@ export default function ReviewCard() {
               className="transition-all h-12 w-12"
             />
           </div>
-          <h5 className="my-2">OS</h5>
+          <h5 className="my-2 text-sm">OS</h5>
           <div className="flex gap-2 flex-wrap">
             <img
               src="https://raw.githubusercontent.com/tandpfun/skill-icons/refs/heads/main/icons/Linux-Dark.svg"
