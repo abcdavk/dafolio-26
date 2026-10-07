@@ -1,12 +1,4 @@
-import {
-  ArrowLeft,
-  Hand,
-  HandGrab,
-  Layers,
-  Layers2,
-  Star,
-  X,
-} from "lucide-react";
+import { ArrowLeft, Hand, HandGrab, Layers, Layers2, Star } from "lucide-react";
 import { useState } from "react";
 
 const reviews = [
