@@ -125,10 +125,10 @@ export default function ReviewCard() {
         className="absolute flex items-center justify-center z-10 bottom-0 bg-black/50 w-full h-full p-4"
       >
         <div className="bg-white/60 backdrop-blur-md p-4 rounded-2xl">
-          <h4 className="text-center font-bold text-black bg-white/40 p-2 rounded-xl">
+          <h4 className="text-center font-bold text-black bg-white/40 p-2 rounded-xl mb-4 shadow-lg">
             Tech Stack
           </h4>
-          <h5 className="my-2 text-sm">Web Development</h5>
+          <h5 className="my-2 text-sm text-black">Web Development</h5>
           <div className="flex gap-2 flex-wrap">
             <img
               src="https://raw.githubusercontent.com/tandpfun/skill-icons/refs/heads/main/icons/React-Dark.svg"
@@ -156,7 +156,7 @@ export default function ReviewCard() {
               className="transition-all h-12 w-12"
             />
           </div>
-          <h5 className="my-2 text-sm">Desktop</h5>
+          <h5 className="mb-2 mt-4 text-sm text-black">Desktop</h5>
           <div className="flex gap-2 flex-wrap">
             <img
               src="https://raw.githubusercontent.com/tandpfun/skill-icons/refs/heads/main/icons/CS.svg"
@@ -184,7 +184,7 @@ export default function ReviewCard() {
               className="transition-all h-12 w-12"
             />
           </div>
-          <h5 className="my-2 text-sm">OS</h5>
+          <h5 className="mb-2 mt-4 text-sm text-black">OS</h5>
           <div className="flex gap-2 flex-wrap">
             <img
               src="https://raw.githubusercontent.com/tandpfun/skill-icons/refs/heads/main/icons/Linux-Dark.svg"
@@ -200,7 +200,7 @@ export default function ReviewCard() {
 
           <div
             onClick={toggleTechStack}
-            className="mt-4 bg-white/50 p-2 text-black rounded-xl font-medium flex justify-center gap-3 cursor-pointer group"
+            className="mt-6 bg-white/50 p-2 text-black rounded-xl font-medium flex justify-center gap-3 cursor-pointer transition-transform hover:scale-101"
           >
             <ArrowLeft className="group-hover:animate-wiggle" />
             Go Back
