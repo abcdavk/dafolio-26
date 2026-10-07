@@ -50,11 +50,14 @@ export default function ChangelogPage() {
           </ul>
         </div>
         <div className="mt-4">
-          <h2>v26.8</h2>
+          <h2>v26.08</h2>
           <p>
             In this version, I'm using Neo-pixel art design by using pixelated
             font and vibrant color. It's not well polised.
           </p>
+          <a href="https://2608.abcdavk.my.id/" className="underline">
+            Check it out!
+          </a>
           <p className="mt-4">What's new:</p>
           <ul>
             <li>- New Neo-pixel art theme.</li>
