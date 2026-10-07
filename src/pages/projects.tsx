@@ -74,7 +74,7 @@ export default function ProjectsPage() {
                 <span className="mt-auto px-2 py-1 rounded-xl text-xs font-bold w-fit text-white bg-[#777C6D]">
                   RIP
                 </span>
-                <span>Rest In Peace (Dead)</span>
+                <span>Rest In Peace (No longer maintained)</span>
               </div>
             </div>
           </span>
