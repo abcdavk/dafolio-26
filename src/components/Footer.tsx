@@ -6,7 +6,7 @@ export default function Footer() {
   };
   return (
     <footer
-      className="mt-16 py-0 px-6 rounded-xl bg-paper-reverse flex justify-between items-center text-paper group cursor-pointer overflow-y-hidden"
+      className="mt-4 py-0 px-6 rounded-xl bg-paper-reverse flex justify-between items-center text-paper group cursor-pointer overflow-y-hidden"
       onClick={backToTop}
     >
       <div className="font-bold">

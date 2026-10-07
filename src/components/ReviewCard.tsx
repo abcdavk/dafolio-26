@@ -1,4 +1,12 @@
-import { Hand, HandGrab, Star } from "lucide-react";
+import {
+  ArrowLeft,
+  Hand,
+  HandGrab,
+  Layers,
+  Layers2,
+  Star,
+  X,
+} from "lucide-react";
 import { useState } from "react";
 
 const reviews = [
@@ -98,6 +106,7 @@ export default function ReviewCard() {
   const [review, setReview] = useState(randomStart);
   const [isAnimating, setIsAnimating] = useState(false);
   const [isClicking, setIsClicking] = useState(false);
+  const [onTechStack, setOnTechStack] = useState(false);
 
   const nextReview = () => {
     if (isAnimating) return;
@@ -113,9 +122,100 @@ export default function ReviewCard() {
     }, 400);
   };
 
+  const toggleTechStack = () => {
+    setOnTechStack(!onTechStack);
+  };
+
   return (
-    <section className="flex flex-col items-center mt-16 px-4 py-10 text-paper rounded-2xl bg-[url('./assets/background.webp')] bg-cover group">
-      <div className="relative w-full md:max-w-120 min-h-80">
+    <section className="relative flex flex-col items-center mt-16 px-4 py-10 text-paper rounded-2xl bg-[url('./assets/background.webp')] bg-cover overflow-hidden">
+      <div
+        hidden={!onTechStack}
+        className="absolute flex items-center justify-center z-10 bottom-0 bg-black/50 w-full h-full p-4"
+      >
+        <div className="bg-white/60 backdrop-blur-md p-4 rounded-2xl">
+          <h4 className="text-center font-bold text-black bg-white/40 p-2 rounded-xl">
+            Tech Stack
+          </h4>
+          <h5 className="my-2">Web Development</h5>
+          <div className="flex gap-2 flex-wrap">
+            <img
+              src="https://raw.githubusercontent.com/tandpfun/skill-icons/refs/heads/main/icons/React-Dark.svg"
+              alt="React"
+              className="transition-all h-12 w-12"
+            />
+            <img
+              src="https://raw.githubusercontent.com/tandpfun/skill-icons/refs/heads/main/icons/VueJS-Dark.svg"
+              alt="Vue"
+              className="transition-all h-12 w-12"
+            />
+            <img
+              src="https://raw.githubusercontent.com/tandpfun/skill-icons/refs/heads/main/icons/NextJS-Dark.svg"
+              alt="NextJS"
+              className="transition-all h-12 w-12"
+            />
+            <img
+              src="https://raw.githubusercontent.com/tandpfun/skill-icons/refs/heads/main/icons/Prisma.svg"
+              alt="Prisma"
+              className="transition-all h-12 w-12"
+            />
+            <img
+              src="https://raw.githubusercontent.com/tandpfun/skill-icons/refs/heads/main/icons/TailwindCSS-Dark.svg"
+              alt="Tailwind"
+              className="transition-all h-12 w-12"
+            />
+          </div>
+          <h5 className="my-2">Desktop</h5>
+          <div className="flex gap-2 flex-wrap">
+            <img
+              src="https://raw.githubusercontent.com/tandpfun/skill-icons/refs/heads/main/icons/CS.svg"
+              alt="CSharp"
+              className="transition-all h-12 w-12"
+            />
+            <img
+              src="https://raw.githubusercontent.com/tandpfun/skill-icons/refs/heads/main/icons/DotNet.svg"
+              alt="DotNet"
+              className="transition-all h-12 w-12"
+            />
+            <img
+              src="https://raw.githubusercontent.com/tandpfun/skill-icons/refs/heads/main/icons/CPP.svg"
+              alt="C++"
+              className="transition-all h-12 w-12"
+            />
+            <img
+              src="https://raw.githubusercontent.com/tandpfun/skill-icons/refs/heads/main/icons/Python-Light.svg"
+              alt="Python"
+              className="transition-all h-12 w-12"
+            />
+            <img
+              src="https://raw.githubusercontent.com/tandpfun/skill-icons/refs/heads/main/icons/QT-Light.svg"
+              alt="Qt"
+              className="transition-all h-12 w-12"
+            />
+          </div>
+          <h5 className="my-2">OS</h5>
+          <div className="flex gap-2 flex-wrap">
+            <img
+              src="https://raw.githubusercontent.com/tandpfun/skill-icons/refs/heads/main/icons/Linux-Dark.svg"
+              alt="Linux"
+              className="transition-all h-12 w-12"
+            />
+            <img
+              src="https://raw.githubusercontent.com/tandpfun/skill-icons/refs/heads/main/icons/Windows-Light.svg"
+              alt="Windows"
+              className="transition-all h-12 w-12"
+            />
+          </div>
+
+          <div
+            onClick={toggleTechStack}
+            className="mt-4 bg-white/50 p-2 text-black rounded-xl font-medium flex justify-center gap-3 cursor-pointer group"
+          >
+            <ArrowLeft className="group-hover:animate-wiggle" />
+            Go Back
+          </div>
+        </div>
+      </div>
+      <div className="relative z-0 w-full md:max-w-120 min-h-80 group">
         <div className="absolute inset-0 bg-paper dark:slate rounded-2xl -rotate-2" />
         <div
           onClick={nextReview}
@@ -177,6 +277,59 @@ export default function ReviewCard() {
           </div>
         </div>
       </div>
+      <section className="mt-16 p-4 gap-2 rounded-xl bg-white/20 backdrop-blur-lg flex h-18 justify-between items-center text-paper">
+        <a
+          href="https://github.com/abcdavk"
+          target="_blank"
+          className="flex relative group justify-center"
+        >
+          <span className="absolute bottom-18 transition-all opacity-0 group-hover:opacity-100 text-[#f2f0e3] font-medium">
+            GitHub
+          </span>
+          <img
+            src="https://raw.githubusercontent.com/Mibea/Hatter/e2be38b856d55bfa578a51c5c7c36c41528982e9/Hatter/scalable/apps/github-desktop.svg"
+            alt="GitHub"
+            className="transition-all h-12 w-12 hover:h-14 hover:w-14"
+          />
+        </a>
+        <a
+          href="mailto:abcdavk@proton.me"
+          className="flex relative group justify-center"
+        >
+          <span className="absolute bottom-18 transition-all opacity-0 group-hover:opacity-100 text-[#f2f0e3] font-medium text-nowrap">
+            Mail (abcdavk@proton.me)
+          </span>
+          <img
+            src="https://raw.githubusercontent.com/Mibea/Hatter/refs/heads/main/Hatter/scalable/apps/internet-mail.svg"
+            alt="Mail"
+            className="transition-all h-12 w-12 hover:h-14 hover:w-14"
+          />
+        </a>
+        <a
+          href="https://discord.com/users/675339937486471178"
+          target="_blank"
+          className="flex relative group justify-center"
+        >
+          <span className="absolute bottom-18 transition-all opacity-0 group-hover:opacity-100 text-[#f2f0e3] font-medium">
+            Discord
+          </span>
+          <img
+            src="https://raw.githubusercontent.com/Mibea/Hatter/e2be38b856d55bfa578a51c5c7c36c41528982e9/Hatter/scalable/apps/discord.svg"
+            alt="Discord"
+            className="transition-all h-12 w-12 hover:h-14 hover:w-14"
+          />
+        </a>
+        <div
+          className="flex relative group justify-center cursor-pointer"
+          onClick={toggleTechStack}
+        >
+          <span className="absolute bottom-16 transition-all opacity-0 group-hover:opacity-100 text-[#f2f0e3] font-medium text-nowrap">
+            Tech Stack
+          </span>
+          <Layers className="transition-all h-10 w-10 group-hover:hidden text-white bg-black/30 p-2 rounded-lg" />
+          <Layers2 className="transition-all h-10 w-10 hidden group-hover:block text-white bg-black/30 p-2 rounded-lg" />
+        </div>
+      </section>
     </section>
   );
 }
