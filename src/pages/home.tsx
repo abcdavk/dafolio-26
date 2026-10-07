@@ -47,7 +47,7 @@ export default function HomePage() {
       <h2 className="text-paper-reverse pb-2 text-center mt-16 animate-pulse hover:animate-none">
         Trustworthy
       </h2>
-      <section className="flex flex-col sm:flex-row sm:justify-center sm:mt-4 gap-6">
+      <section className="grid grid-cols-2 md:grid-cols-4 mt-6 gap-6 xl:w-[50%] mx-auto">
         <div className="flex flex-col items-center gap-3 group">
           <PackageCheck className="group-hover:hidden" height={64} width={64} />
           <PackageOpen
