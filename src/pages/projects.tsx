@@ -1,8 +1,18 @@
 import { ProjectCard, type ProjectCardProps } from "../components/ProjectCard";
 import larisInImageUrl from "../assets/projects/laris-in.png";
+import platinumBannerUrl from "../assets/projects/platinum_banner.png";
 import { ArrowDown } from "lucide-react";
 
 const projectList: ProjectCardProps[] = [
+  {
+    title: "Platinum",
+    description: "An AppImage Manager",
+    createDate: "October, 2026",
+    status: "LTS",
+    tags: ["GTK", "Linux"],
+    coverUrl: platinumBannerUrl,
+    to: "https://github.com/abcdavk/platinum",
+  },
   {
     title: "LarisIn",
     description:
