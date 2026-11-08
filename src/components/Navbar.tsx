@@ -18,7 +18,7 @@ export default function Navbar() {
         </div>
         <Link
           to={hiddenLink}
-          className="p-2 font-bold bg-paper-reverse text-paper rounded-xl shadow-black/20 shadow-lg opacity-0 group-hover:opacity-100 scale-0 group-hover:scale-100 -translate-x-30 transition-all duration-500 ease-in-out flex"
+          className="p-2 font-bold bg-paper-reverse text-paper rounded-xl shadow-black/20 shadow-lg opacity-0 group-hover:opacity-100 scale-0 group-hover:scale-100 -translate-x-36 transition-all duration-500 ease-in-out flex"
         >
           {hiddenText}{" "}
           <ArrowUpRight
