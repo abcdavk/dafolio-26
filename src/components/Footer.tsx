@@ -14,7 +14,7 @@ export default function Footer() {
           Back to top <ArrowUp className="animate-bounce" />
         </p>
         <p className="transition-transform -translate-y-3 group-hover:translate-y-12">
-          Dafolio
+          Даволио
         </p>
       </div>
       <div className="hidden sm:block">
