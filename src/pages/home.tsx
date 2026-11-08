@@ -37,7 +37,7 @@ export default function HomePage() {
           <ArrowUpRight className="opacity-0 group-hover:opacity-100 group-hover:scale-x-100 translate-x-6 group-hover:-translate-x-2 transition-all duration-500 ease-in-out" />
         </Link>
         <Link
-          to="/projects"
+          to="/project"
           className="w-fit flex gap-4 align-middle py-4 px-6 rounded-xl font-bold border border-paper-reverse transition-transform duration-250 ease-in-out hover:scale-103 group"
         >
           <Cog className="group-hover:animate-spin" />
