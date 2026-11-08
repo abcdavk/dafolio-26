@@ -11,7 +11,7 @@ const projectList: ProjectCardProps[] = [
     status: "LTS",
     tags: ["GTK", "Linux"],
     coverUrl: platinumBannerUrl,
-    to: "https://github.com/abcdavk/platinum",
+    to: "/project/platinum",
   },
   {
     title: "LarisIn",
