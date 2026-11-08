@@ -2,6 +2,9 @@ import platinumBannerUrl from "../../assets/projects/platinum_banner.png";
 
 import { ArrowUpRight, Folder, Monitor, Terminal } from "lucide-react";
 import "./style.css";
+import { CommandBlock } from "./components/CodeBlock";
+
+
 
 export default function ProjectPlatinumPage() {
   return (
@@ -63,13 +66,10 @@ export default function ProjectPlatinumPage() {
           </div>
           <div className="docs-card">
             <p className="mb-4">Run this command in your terminal:</p>
-            <div
-              className="docs-command"
-              role="group"
-              aria-label="Install command"
-            >
-              <code>curl -fsSL https://raw.githubusercontent.com/abcdavk/platinum/refs/heads/main/tools/setup.sh | bash</code>
-            </div>
+            <CommandBlock
+              label="Install"
+              command="curl -fsSL https://raw.githubusercontent.com/abcdavk/platinum/refs/heads/main/tools/setup.sh | bash"
+            />
           </div>
         </section>
 
@@ -80,13 +80,10 @@ export default function ProjectPlatinumPage() {
           </div>
           <div className="docs-card">
             <p className="mb-4">To remove Platinum, run:</p>
-            <div
-              className="docs-command"
-              role="group"
-              aria-label="Uninstall command"
-            >
-              <code>curl -fsSL https://raw.githubusercontent.com/abcdavk/platinum/refs/heads/main/tools/uninstall.sh | bash</code>
-            </div>
+            <CommandBlock
+              label="Uninstall"
+              command="curl -fsSL https://raw.githubusercontent.com/abcdavk/platinum/refs/heads/main/tools/uninstall.sh | bash"
+            />
           </div>
         </section>
       </div>
