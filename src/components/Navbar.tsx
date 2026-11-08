@@ -11,7 +11,7 @@ export default function Navbar() {
     <nav className="flex justify-between items-center">
       <div className="group cursor-pointer flex">
         <div className="font-bold text-2xl group-hover:opacity-0 group-hover:scale-0 group-hover:-translate-x-14 transition-all duration-500 ease-in-out">
-          Dafolio{" "}
+          Даволио{" "}
           <span className="text-xs align-top text-black/60 bg-black/20 dark:text-white/60 dark:bg-white/20 px-1 rounded-full font-light">
             26.10
           </span>
