@@ -1,14 +1,18 @@
 import platinumBannerUrl from "../../assets/projects/platinum_banner.png";
 
-import { ArrowUpRight, Folder, Monitor, Terminal } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, Folder, Monitor, Terminal } from "lucide-react";
 import "./style.css";
 import { CommandBlock } from "./components/CodeBlock";
+import { Link } from "react-router-dom";
 
 
 
 export default function ProjectPlatinumPage() {
   return (
     <section className="docs my-12 sm:my-16">
+      <Link to="/project" className="flex mb-8 gap-2 items-center bg-paper-reverse w-fit text-paper p-2 pr-4 rounded-xl group hover:scale-104 transition-transform">
+        <ArrowLeft className="group-hover:animate-wiggle"/> Back
+      </Link>
       <header className="docs-hero mb-10 overflow-hidden rounded-3xl">
         <img
           src={platinumBannerUrl}
