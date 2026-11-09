@@ -1,4 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export type ProjectStatus = "WIP" | "LTS" | "RIP";
 
@@ -10,6 +11,7 @@ export interface ProjectCardProps {
   coverUrl: string;
   tags?: string[];
   to?: string;
+  openNewTab: boolean;
 }
 
 export function ProjectCard({
@@ -20,6 +22,7 @@ export function ProjectCard({
   tags = [],
   coverUrl,
   to = "",
+  openNewTab
 }: ProjectCardProps) {
   let statusStyle = "mt-auto px-2 py-1 rounded-xl text-xs font-bold w-fit ";
 
@@ -37,19 +40,9 @@ export function ProjectCard({
       break;
   }
 
-  console.log(to);
-  const onClick = () => {
-    if (to === "") return;
-    else {
-      window.open(to, "_blank", "noopener,noreferrer");
-    }
-  };
-
-  return (
-    <div
-      onClick={onClick}
-      className={`relative rounded-xl overflow-hidden border border-black/20 hover:border-black/40 dark:border-white/20 hover:dark:border-white/40 bg-gray-400/10 dark:bg-gray-500/10 w-full sm:h-100 flex flex-col transition-all hover:scale-102 hover:overflow-y-scroll scrollbar-none hover:rounded-none group ${to && "cursor-pointer"}`}
-    >
+  const cardClassName = `relative rounded-xl overflow-hidden border border-black/20 hover:border-black/40 dark:border-white/20 hover:dark:border-white/40 bg-gray-400/10 dark:bg-gray-500/10 w-full sm:h-100 flex flex-col transition-all hover:scale-102 hover:overflow-y-scroll scrollbar-none hover:rounded-none group ${to && "cursor-pointer"}`;
+  const cardContent = (
+    <>
       <img src={coverUrl} alt={title} className="h-48 object-cover" />
       {to && (
         <div className="absolute top-3 right-3 flex bg-black/30 rounded-lg backdrop-blur-md text-white overflow-hidden group-hover:rounded-none">
@@ -75,6 +68,21 @@ export function ProjectCard({
           })}
         </div>
       </div>
-    </div>
+    </>
+  );
+
+  if (!to) {
+    return <div className={cardClassName}>{cardContent}</div>;
+  }
+
+  return (
+    <Link
+      to={to}
+      target={openNewTab ? "_blank" : undefined}
+      rel={openNewTab ? "noopener noreferrer" : undefined}
+      className={cardClassName}
+    >
+      {cardContent}
+    </Link>
   );
 }

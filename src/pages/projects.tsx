@@ -12,6 +12,7 @@ const projectList: ProjectCardProps[] = [
     tags: ["GTK", "Linux"],
     coverUrl: platinumBannerUrl,
     to: "/project/platinum",
+    openNewTab: false
   },
   {
     title: "LarisIn",
@@ -22,6 +23,7 @@ const projectList: ProjectCardProps[] = [
     tags: ["Web", "Team Based"],
     coverUrl: larisInImageUrl,
     to: "https://laris-in.vercel.app/",
+    openNewTab: true
   },
   {
     title: "SimpL Object Detection",
@@ -33,6 +35,7 @@ const projectList: ProjectCardProps[] = [
     coverUrl:
       "https://github.com/abcdavk/simple-object-detection/blob/main/public/img/image.png?raw=true",
     to: "https://simple-object-detection.vercel.app/",
+    openNewTab: true
   },
 ];
 
@@ -53,6 +56,7 @@ export default function ProjectsPage() {
                 status={project.status}
                 tags={project.tags}
                 to={project.to}
+                openNewTab={project.openNewTab}
                 key={index}
               />
             );
